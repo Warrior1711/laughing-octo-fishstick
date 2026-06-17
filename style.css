@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background:
+        radial-gradient(circle at top, #330000, #0a0a0a 60%);
+    color: white;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.animated-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff3030;
+    letter-spacing: 5px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.subtitle {
+    color: #bbb;
+    margin-top: 15px;
+}
+
+/* Glowing animation */
+@keyframes glow {
+    from {
+        text-shadow:
+            0 0 10px #ff0000,
+            0 0 20px #ff0000;
+    }
+    to {
+        text-shadow:
+            0 0 20px #ff4444,
+            0 0 40px #ff4444,
+            0 0 60px #ff4444;
+    }
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    width: 320px;
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid #ff2222;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.15);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h2 {
+    padding: 20px 20px 10px;
+    color: #ff4040;
+}
+
+.card p {
+    padding: 0 20px 20px;
+    color: #ccc;
+}
+
+.card-button {
+    display: block;
+    text-align: center;
+    margin: 0 20px 20px;
+    padding: 12px;
+    background: linear-gradient(
+        90deg,
+        #cc0000,
+        #ff3333
+    );
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card-button:hover {
+    background: linear-gradient(
+        90deg,
+        #ff3333,
+        #ff6666
+    );
+}
+
+/* Bottom Navigation */
+footer {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nav-buttons a {
+    padding: 12px 25px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #ff3333;
+    border-radius: 50px;
+    background: rgba(255, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.nav-buttons a:hover {
+    background: #ff3333;
+    box-shadow: 0 0 20px #ff3333;
+}
